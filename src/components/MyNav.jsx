@@ -12,7 +12,11 @@ const MyNav = () => {
       style={{ backgroundColor: "#221f1f" }}
     >
       <Navbar.Brand href="#home">
-        <img src={logo} style={{ width: "100px", height: "55px" }} alt="logo" />
+        <img
+          src={logo}
+          style={{ width: "100px", height: "55px" }}
+          alt="dogeflix logo"
+        />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
