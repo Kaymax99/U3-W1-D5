@@ -16,7 +16,7 @@ class MoviesList extends Component {
                   className="btn btn-secondary btn-sm dropdown-toggle rounded-0"
                   type="button"
                   id="dropdownMenuButton"
-                  data-toggle="dropdown"
+                  data-bs-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
                   style={{ backgroundColor: "inherit" }}
@@ -54,8 +54,8 @@ class MoviesList extends Component {
             </div>
           </div>
           <Trending />
-          {/* <WatchAgain /> */}
-          {/* <NewReleases /> */}
+          <WatchAgain />
+          <NewReleases />
         </div>
       </>
     );

@@ -15,7 +15,7 @@ class Trending extends Component {
       if (res.ok) {
         const data = await res.json();
         this.setState({ movies: data.Search.splice(0, 6) });
-        console.log(this.state);
+        /* console.log(this.state.movies); */
       } else {
         alert(
           "Impossibile ricevere dati nella sezione trending, aggiorna la pagina"
@@ -25,6 +25,7 @@ class Trending extends Component {
       alert("Errore fatale nella sezione trending: " + error);
     }
   };
+
   componentDidMount = () => {
     console.log("Effettuo il mount");
     this.fetchMovies();

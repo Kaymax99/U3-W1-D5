@@ -68,10 +68,23 @@ a > svg {
   font-size: 0.6em;
 }
 
-.col img {
+.col {
   transition: transform 0.2s;
 }
 
-.col img:hover {
-  transform: scale(1.1);
+.col:hover {
+  transform: scale(1.05);
+}
+
+.movieDesc {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: black;
+  color: white;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.movieDesc:hover {
+  opacity: 80%;
 }

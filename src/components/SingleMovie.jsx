@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Col } from "react-bootstrap";
+import { Card, Col, ListGroup, Row } from "react-bootstrap";
 
 class SingleMovie extends Component {
   state = {
@@ -8,13 +8,21 @@ class SingleMovie extends Component {
   render() {
     return (
       <>
-        <Col className="text-center mt-3">
-          <img
-            src={this.props.SingleMovie.Poster}
-            alt={this.props.SingleMovie.Title}
+        <Col className="text-center">
+          <Card
             style={{ height: "100%" }}
-            className="img-fluid"
-          ></img>
+            className="border-0 position-relative"
+          >
+            <Card.Img
+              style={{ height: "100%" }}
+              src={this.props.SingleMovie.Poster}
+              className="img-fluid"
+            />
+            <Card.Body className="position-absolute bottom-0 movieDesc d-flex flex-column justify-content-center">
+              <Card.Title>{this.props.SingleMovie.Title}</Card.Title>
+              <Card.Text>{this.props.SingleMovie.Year}</Card.Text>
+            </Card.Body>
+          </Card>
         </Col>
       </>
     );
