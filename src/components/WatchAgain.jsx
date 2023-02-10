@@ -21,7 +21,7 @@ class WatchAgain extends Component {
           this.setState({
             isLoading: false,
             hasError: true,
-            showErrorMessage: `C'è stato un errore durante il caricamento dei contenuti. Errore: ${res.status}`,
+            showErrorMessage: `There was an error while loading the content. Try refreshing the page, and if the error persists, please contact us. Error: ${res.status}.`,
           });
         } else {
           this.setState({ movies: data.Search.splice(0, 6), isLoading: false });
@@ -31,14 +31,14 @@ class WatchAgain extends Component {
         this.setState({
           isLoading: false,
           hasError: true,
-          showErrorMessage: `C'è stato un errore durante il caricamento dei contenuti. Errore: ${res.status}`,
+          showErrorMessage: `There was an error while loading the content. Try refreshing the page, and if the error persists, please contact us. Error: ${res.status}.`,
         });
       }
     } catch (error) {
       this.setState({
         isLoading: false,
         hasError: true,
-        showErrorMessage: `C'è stato un errore durante il caricamento dei contenuti: ${error}`,
+        showErrorMessage: `Fatal error while loading the content, please try again later. Error: ${error}`,
       });
     }
   };
@@ -52,7 +52,7 @@ class WatchAgain extends Component {
     /* console.log("Effettuo il render"); */
     return (
       <>
-        <h4 className="mt-4">Watch it Again:</h4>
+        <h4 className="mt-2">Watch it Again:</h4>
         <Row xs={1} md={2} lg={4} xl={6}>
           {this.state.hasError && (
             <Alert className="w-100 text-center" variant="danger">

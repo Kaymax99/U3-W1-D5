@@ -8,7 +8,7 @@ class SingleMovie extends Component {
   render() {
     return (
       <>
-        <Col className="text-center mt-3">
+        <Col className="text-center mb-3">
           <Card
             style={{ height: "100%" }}
             className="border-0 position-relative"

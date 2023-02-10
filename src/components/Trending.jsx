@@ -22,7 +22,7 @@ class Trending extends Component {
           this.setState({
             isLoading: false,
             hasError: true,
-            showErrorMessage: `C'è stato un errore durante il caricamento dei contenuti. Errore: ${res.status}`,
+            showErrorMessage: `There was an error while loading the content. Try refreshing the page, and if the error persists, please contact us. Error: ${res.status}. `,
           });
         } else {
           this.setState({ movies: data.Search.splice(0, 6), isLoading: false });
@@ -32,14 +32,14 @@ class Trending extends Component {
         this.setState({
           isLoading: false,
           hasError: true,
-          showErrorMessage: `C'è stato un errore durante il caricamento dei contenuti. Errore: ${res.status}`,
+          showErrorMessage: `There was an error while loading the content. Try refreshing the page, and if the error persists, please contact us. Error: ${res.status}.`,
         });
       }
     } catch (error) {
       this.setState({
         isLoading: false,
         hasError: true,
-        showErrorMessage: `C'è stato un errore durante il caricamento dei contenuti: ${error}`,
+        showErrorMessage: `Fatal error while loading the content, please try again later. Error: ${error}`,
       });
     }
   };

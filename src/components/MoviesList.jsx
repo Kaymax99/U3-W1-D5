@@ -8,7 +8,7 @@ class MoviesList extends Component {
   render() {
     return (
       <>
-        <div className="px-4 mb-5">
+        <div className="px-4">
           <MainHeader />
           <Trending />
           <WatchAgain />
