@@ -51,7 +51,7 @@ const MovieDetails = () => {
           <Row className="justify-content-center">
             <Col xs={10}>
               <h1 className="text-center text-light my-3">{movie.Title}</h1>
-              <Card>
+              <Card className="movieDetails text-light">
                 <Row>
                   <Col xs={7}>
                     <Card.Img variant="top" src={movie.Poster} />

@@ -88,3 +88,7 @@ a > svg {
 .movieDesc:hover {
   opacity: 80%;
 }
+
+.movieDetails {
+  background-color: inherit;
+}
