@@ -1,14 +1,16 @@
 import { Component } from "react";
-import { Card, Col } from "react-bootstrap";
+import { Button, Card, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 class SingleMovie extends Component {
   state = {
     selected: false,
   };
+
   render() {
     return (
       <>
-        <Col className="text-center mb-3">
+        <Col className="text-center mb-3 movieCard">
           <Card
             style={{ height: "100%" }}
             className="border-0 position-relative"
@@ -22,6 +24,11 @@ class SingleMovie extends Component {
               <Card.Title>{this.props.SingleMovie.Title}</Card.Title>
               <Card.Text>{this.props.SingleMovie.Year}</Card.Text>
             </Card.Body>
+            <Link to={"/movie-details/" + this.props.SingleMovie.imdbID}>
+              <Button className="position-absolute bottom-0 end-0 w-50">
+                See more
+              </Button>
+            </Link>
           </Card>
         </Col>
       </>

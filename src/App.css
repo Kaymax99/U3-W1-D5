@@ -72,7 +72,7 @@ a > svg {
   transition: transform 0.2s;
 }
 
-.col:hover {
+.movieCard:hover {
   transform: scale(1.05);
 }
 
